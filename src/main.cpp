@@ -30,13 +30,13 @@ int main(){
 
 	switch (choose1){
 		case 1 :{
-			for(int i=0; i<10; i++){
+			for(int i=0; i<3; i++){
 			cout << "Saisir un réel : "<<endl;
 			cin >> tmp_nb;
 			Reel.push_back(reel());
 			Reel[i].nb = tmp_nb;
-			goto welcome;
 			}
+			goto welcome;
 		break;}
 		case 2 :{
 			cout << "Voici la liste des réels: " << endl;
