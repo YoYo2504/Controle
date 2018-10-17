@@ -52,12 +52,20 @@ int main(){
 			while(recherche != Reel[i].nb){
 				i++;
 			}
-			cout << "Valeur : " << Reel[i].nb << endl;
 			Reel.erase(Reel.begin()+i);
 			goto welcome;
 		break;}
 		case 4 :{
-
+			cout << "Quel réel voulez-vous supprimer de toute la liste ?" <<endl;
+			cin >> recherche;
+			int i =0;
+			if(i!=3){
+				while(recherche != Reel[i].nb){
+					i++;
+					Reel.erase(Reel.begin()+i);
+				}
+				i++;
+			}
 			goto welcome;
 		break;}
 		case 5 :{
