@@ -12,7 +12,7 @@ class reel{
 
 int main(){
 	int choose1;
-	float tmp_nb;
+	float tmp_nb, recherche;
 
 	vector <reel> Reel;
 
@@ -45,7 +45,21 @@ int main(){
 			}
 			goto welcome;
 		break;}
+		case 3 :{
+			cout << "Quel réel voulez-vous supprimer ?"<<endl;
+			cin >> recherche;
+			int i =0;
+			while(recherche != Reel[i].nb){
+				i++;
+			}
+			cout << "Valeur : " << Reel[i].nb << endl;
+			Reel.erase(Reel.begin()+i);
+			goto welcome;
+		break;}
+		case 4 :{
 
+			goto welcome;
+		break;}
 		case 5 :{
 			cout << "Au revoir"<<endl;
 			goto stop;
