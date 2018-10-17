@@ -45,5 +45,12 @@ int main(){
 			}
 			goto welcome;
 		break;}
+
+		case 5 :{
+			cout << "Au revoir"<<endl;
+			goto stop;
+			stop:	;
+			system("clear");
+		}
 	}
 }
