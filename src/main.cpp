@@ -1,3 +1,8 @@
+/*!\file main.cpp
+*\Author Yoan FILIPE
+*\Version 1.0
+*/
+
 #include <iostream>
 #include <stdlib.h>
 #include <string>
@@ -5,19 +10,28 @@
 
 using namespace std;
 
+/*!\Class reel
+*\ objet : nb
+*/
 class reel{
 	public:
+/*!\objet nb
+*\type float
+*/
 		float nb;
 };
 
 int main(){
+//objet chhose1 défini ce que l'utilisateur rentre
 	int choose1;
+//tmp_nb --> valeur tampon que l'utilisateur rentre
+//recherche --> c'est la valeur que l'utilisateur va rentrer pour détruire après le réel dans la liste
 	float tmp_nb, recherche;
 
 	vector <reel> Reel;
 
 	welcome:
-
+//Création du menu
 	cout <<"------------MENU----------"<<endl;
 	cout << endl;
 	cout << "Taper 1 pour ajouter un réel"<<endl;
@@ -29,6 +43,7 @@ int main(){
 	cin >> choose1;
 
 	switch (choose1){
+//Permet de saisir un reel et l'enregistré dans le tableau
 		case 1 :{
 			for(int i=0; i<3; i++){
 			cout << "Saisir un réel : "<<endl;
@@ -39,6 +54,7 @@ int main(){
 			goto welcome;
 		break;}
 		case 2 :{
+//permet d'afficher la liste des réel
 			cout << "Voici la liste des réels: " << endl;
 			for(int i=0; i<Reel.size(); i++){
 				cout << Reel[i].nb << endl;
@@ -46,6 +62,7 @@ int main(){
 			goto welcome;
 		break;}
 		case 3 :{
+//permet de supprimé le premier réel de la liste que l'utilisateur a sélectionner
 			cout << "Quel réel voulez-vous supprimer ?"<<endl;
 			cin >> recherche;
 			int i =0;
@@ -56,6 +73,7 @@ int main(){
 			goto welcome;
 		break;}
 		case 4 :{
+//Permet de supprimer tout les doublons de réel de la liste, que l'utilisateur sélectionne
 			cout << "Quel réel voulez-vous supprimer de toute la liste ?" <<endl;
 			cin >> recherche;
 			int i =0;
@@ -69,6 +87,7 @@ int main(){
 			goto welcome;
 		break;}
 		case 5 :{
+//Permet de quitter et efface l'invite de commande
 			cout << "Au revoir"<<endl;
 			goto stop;
 			stop:	;
